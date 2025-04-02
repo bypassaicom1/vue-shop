@@ -1,0 +1,16 @@
+body{
+  min-width: 400px;
+  min-height: 800px;
+  height: 100vh;
+  width: 100wh;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow: auto;
+  font: 12px/1.5 system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji,BlinkMacSystemFont,Helvetica Neue,Arial,PingFang SC,PingFang TC,PingFang HK,Microsoft Yahei,Microsoft JhengHei;
+}
+#app{
+  width: 100%;
+  height: 100%;
+  
+}
