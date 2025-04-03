@@ -25,7 +25,7 @@
                 </el-carousel>
                 <div class="container__top__category__right">
                     <el-image v-for="item in cates" class="container__top__category__right__item" style="width: 100%; height: 100%" :src="item" :zoom-rate="1.2" :max-scale="7"
-                            :min-scale="0.2" fit="cover" />
+                            :min-scale="0.3" fit="cover" />
                 </div>
             </div>
         </div>
