@@ -24,13 +24,21 @@
                     </el-carousel-item>
                 </el-carousel>
                 <div class="container__top__category__right">
-                    <el-image v-for="item in cates" class="container__top__category__right__item" style="width: 100%; height: 100%" :src="item" :zoom-rate="1.2" :max-scale="7"
-                            :min-scale="0.3" fit="cover" />
+                    <el-image v-for="item in cates" class="container__top__category__right__item"
+                        style="width: 100%; height: 100%" :src="item" :zoom-rate="1.2" :max-scale="7" :min-scale="0.3"
+                        fit="cover" />
                 </div>
             </div>
         </div>
+        <div class="container__logo">
+            <div class="container__logo-like"></div>
+            <div class="container__logo__text">
+                <span style="font-size:15px ;">猜你喜欢</span>
+                <span>精选好物推荐</span>
+            </div>
+        </div>
         <div class="container__content">
-
+            <userlike></userlike>
         </div>
     </div>
 </template>
@@ -38,6 +46,7 @@
 import Navigation from '@/components/tabar/navigation.vue'
 import Search from '@/components/input/search.vue'
 import Category from '@/components/select/category.vue'
+import userlike from '@/views/shop/userlike.vue'
 const images = [
     "https://gw.alicdn.com/imgextra/i1/O1CN01NJPKCI1oN9KE4ry7R_!!6000000005212-1-tps-2112-800.gif",
     "https://gw.alicdn.com/imgextra/i1/O1CN01CZVirQ29K2ZhxkHc4_!!6000000008048-1-tps-2112-800.gif",
@@ -59,11 +68,11 @@ const cates = [
     flex-direction: column;
     align-items: center;
     white-space: nowrap;
+    min-width: 1200px;
 
     &__top {
         flex: 3;
         width: 87%;
-        // background-color: red;
 
         &__search {
             height: 150px;
@@ -96,6 +105,7 @@ const cates = [
             height: 400px;
             display: flex;
             gap: 15px;
+            flex-shrink: 0;
 
             &__left {
                 flex: 0.9;
@@ -105,9 +115,10 @@ const cates = [
             }
 
             &__center {
-                :deep(.el-carousel__container){
+                :deep(.el-carousel__container) {
                     height: 100%;
                 }
+
                 height: 100%;
                 flex: 2.5;
                 background-color: aqua;
@@ -115,13 +126,15 @@ const cates = [
             }
 
             &__right {
+                min-width: 250px;
                 flex: 0.8;
                 border-radius: 10px;
                 display: flex;
                 flex-direction: column;
                 justify-content: space-between;
                 gap: 15px;
-                &__item{
+
+                &__item {
                     flex: 1;
                     background-color: red;
                     border-radius: 7px;
@@ -130,10 +143,35 @@ const cates = [
         }
     }
 
+    &__logo {
+        width: 87%;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        &-like {
+            height: 48px;
+            width: 48px;
+            background: url('https://gw.alicdn.com/imgextra/i2/O1CN011E0R1J23w9lJDeJXk_!!6000000007319-2-tps-192-192.png')center center no-repeat;
+            background-size: 48px;
+            align-self: self-start;
+            background-color: #FFF1EB;
+            border-radius: 100px;
+            margin-top: 15px;
+            margin-bottom: 15px;
+        }
+
+        &__text {
+            display: flex;
+            flex-direction: column;
+            gap: 3px;
+            color: #FF5000;
+        }
+
+    }
+
     &__content {
         flex: 1;
         width: 87%;
-        background-color: green;
     }
 }
 </style>
