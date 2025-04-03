@@ -75,7 +75,7 @@ const cates = [
         width: 87%;
 
         &__search {
-            height: 150px;
+            height: 180px;
             background-color: white;
             display: flex;
             white-space: nowrap;
@@ -83,8 +83,10 @@ const cates = [
             &__left {
                 flex: 1;
                 background-color: blue;
-                background: url('https://img.alicdn.com/imgextra/i3/O1CN01LvV0d41fjkGWg6iN6_!!6000000004043-2-tps-480-144.png') center center no-repeat;
-                background-size: auto 70px;
+                background: url('	https://img.alicdn.com/imgextra/i2/O1CN01ExcKl21ogqN64gt1U_!!6000000005255-1-tps-960-288.gif') center center no-repeat;
+                background-size: auto 90px;
+                margin-right: 40px;
+                margin-top: 10px;
             }
 
             &__center {
