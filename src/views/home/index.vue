@@ -68,7 +68,7 @@ const cates = [
     flex-direction: column;
     align-items: center;
     white-space: nowrap;
-    min-width: 1200px;
+    min-width: 1423px;
 
     &__top {
         flex: 3;
@@ -106,7 +106,7 @@ const cates = [
             display: flex;
             gap: 15px;
             flex-shrink: 0;
-
+            min-width: 1240px;
             &__left {
                 flex: 0.9;
                 background-color: #F7F7F7;
