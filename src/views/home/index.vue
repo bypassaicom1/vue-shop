@@ -1,8 +1,8 @@
 <template>
-    <div class="container">
+    <div ref="index_container" class="container">
         <div class="container__top">
             <Navigation></Navigation>
-            <div class="container__top__search">
+            <div ref="search" class="container__top__search">
                 <div class="container__top__search__left">
 
                 </div>
@@ -47,6 +47,7 @@ import Navigation from '@/components/tabar/navigation.vue'
 import Search from '@/components/input/search.vue'
 import Category from '@/components/select/category.vue'
 import userlike from '@/views/shop/userlike.vue'
+import { onMounted, reactive, ref, watch } from 'vue'
 const images = [
     "https://gw.alicdn.com/imgextra/i1/O1CN01NJPKCI1oN9KE4ry7R_!!6000000005212-1-tps-2112-800.gif",
     "https://gw.alicdn.com/imgextra/i1/O1CN01CZVirQ29K2ZhxkHc4_!!6000000008048-1-tps-2112-800.gif",
@@ -59,6 +60,24 @@ const cates = [
     "https://img.alicdn.com/imgextra/i1/O1CN01UoFupT1WnZ5J5rKta_!!6000000002833-2-tps-512-176.png",
     "https://img.alicdn.com/imgextra/i1/O1CN01bWoqwD1nFzWEe55WO_!!6000000005061-2-tps-512-176.png"
 ]
+const search = ref()
+const index_container = ref()
+onMounted(() => {
+    insetObs()
+})
+const insetObs = () => {
+    index_container.value.addEventListener('scroll', function () {
+        let scrollY = index_container.value.scrollTop - search.value.scrollHeight + 35
+        let searchY = search.value.offsetTop
+        if (scrollY > searchY) {
+            console.log("超过了");
+            search.value.style.position = 'fixed'
+        } else {
+            console.log("没超过");
+            search.value.style.position = ''
+        }
+    });
+}
 </script>
 <style scoped lang="scss">
 .container {
@@ -68,17 +87,24 @@ const cates = [
     flex-direction: column;
     align-items: center;
     white-space: nowrap;
-    min-width: 1423px;
+    min-width: 1000px;
+    overflow: auto;
 
     &__top {
         flex: 3;
         width: 87%;
+        position: relative;
 
         &__search {
-            height: 180px;
+            background-color: #FF5000;
+            height: 150px;
             background-color: white;
             display: flex;
             white-space: nowrap;
+           // position:fixed;
+            top: 0;
+            width: 100%;
+            z-index: 2;
 
             &__left {
                 flex: 1;
@@ -108,7 +134,7 @@ const cates = [
             display: flex;
             gap: 15px;
             flex-shrink: 0;
-            min-width: 1240px;
+
             &__left {
                 flex: 0.9;
                 background-color: #F7F7F7;
@@ -150,6 +176,7 @@ const cates = [
         display: flex;
         align-items: center;
         gap: 10px;
+
         &-like {
             height: 48px;
             width: 48px;

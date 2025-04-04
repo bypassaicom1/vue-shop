@@ -138,7 +138,7 @@ const datas = [
 
         &__img {
             width: 100%;
-            height: 265px;
+            height: 60%;
             border-radius: 10px;
         }
 

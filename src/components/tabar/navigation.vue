@@ -31,7 +31,7 @@
     justify-content: space-between;
     align-items: center;
     font-weight: lighter;
-
+    font-size: 12px;
     &__left {
         display: flex;
         gap: 10px;

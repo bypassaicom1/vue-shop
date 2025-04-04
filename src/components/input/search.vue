@@ -37,7 +37,7 @@ const toSearch = ()=>{
         border-radius: 5px;
         position: relative;
         left: -70px;
-
+        transition: all 0.5s;
         &:hover {
             transition: all 0.5s;
             width: 66px;
