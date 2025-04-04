@@ -72,12 +72,11 @@ const insetObs = () => {
         if (scrollY > searchY) {
             console.log("超过了");
             search.value.style.position = 'fixed'
-            search.value.style.height = '92px'
-            search.value.style.width = '87%'
+            search.value.style.height = '80px'
         } else {
             console.log("没超过");
             search.value.style.position = ''
-            search.value.style.height = '120px'
+            search.value.style.height = '90px'
         }
     });
 }
@@ -100,28 +99,30 @@ const insetObs = () => {
 
         &__search {
             background-color: #FF5000;
-            height: 120px;
+            height: 90px;
             background-color: white;
             display: flex;
             white-space: nowrap;
+            justify-content: center;
+            transition:all 0.5s;
             top: 0;
-            left: 6.5%;
+            left: 0;
             width: 100%;
             z-index: 999;
-
+            gap: 20px;
             &__left {
                 flex: 1;
                 background-color: blue;
                 background: url('	https://img.alicdn.com/imgextra/i2/O1CN01ExcKl21ogqN64gt1U_!!6000000005255-1-tps-960-288.gif') center center no-repeat;
-                background-size: auto 90px;
-                margin-right: 40px;
+                background-size: auto 70px;
                 margin-top: 10px;
+                border-radius: 30%;
             }
 
             &__center {
-                flex: 2;
+                flex: 3;
                 display: flex;
-
+                width: 752px;
                 &__search {}
             }
 

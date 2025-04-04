@@ -23,14 +23,14 @@ const toSearch = ()=>{
     &__input {
         border-radius: 10px;
         border: 2px solid #ff5000;
-        height: 50px;
+        height: 40px;
         width: 100%;
         outline: none;
     }
 
     &__btn {
         width: 76px;
-        height: 48px;
+        height: 40px;
         color: white;
         background-color: #ff5000;
         border: none;
@@ -38,11 +38,6 @@ const toSearch = ()=>{
         position: relative;
         left: -70px;
         transition: all 0.5s;
-        &:hover {
-            transition: all 0.5s;
-            width: 66px;
-            height: 38px;
-        }
     }
 
     &__btn1 {
