@@ -72,9 +72,12 @@ const insetObs = () => {
         if (scrollY > searchY) {
             console.log("超过了");
             search.value.style.position = 'fixed'
+            search.value.style.height = '92px'
+            search.value.style.width = '87%'
         } else {
             console.log("没超过");
             search.value.style.position = ''
+            search.value.style.height = '120px'
         }
     });
 }
@@ -97,14 +100,14 @@ const insetObs = () => {
 
         &__search {
             background-color: #FF5000;
-            height: 150px;
+            height: 120px;
             background-color: white;
             display: flex;
             white-space: nowrap;
-           // position:fixed;
             top: 0;
+            left: 6.5%;
             width: 100%;
-            z-index: 2;
+            z-index: 999;
 
             &__left {
                 flex: 1;
