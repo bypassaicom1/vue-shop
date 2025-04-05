@@ -2,7 +2,7 @@
     <div class="navigation-container">
         <div class="navigation-container__left">
             <span class="navigation-container__left__text">中国大陆</span>
-            <span class="navigation-container__left__text">亲，请登录</span>
+            <span @click="router.push('/login')" class="navigation-container__left__text">亲，请登录</span>
             <span class="navigation-container__left__text">免费注册</span>
             <span class="navigation-container__left__text">网页无障碍</span>
             <span class="navigation-container__left__text">切换企业版</span>
@@ -21,6 +21,9 @@
     </div>
 </template>
 <script setup>
+import { useRouter } from 'vue-router';
+const router = useRouter()
+
 </script>
 <style scoped lang="scss">
 .navigation-container {
