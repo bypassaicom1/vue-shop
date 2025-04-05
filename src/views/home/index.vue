@@ -1,7 +1,6 @@
 <template>
     <div ref="index_container" class="container">
         <div class="container__top">
-            <Navigation></Navigation>
             <div ref="search" class="container__top__search">
                 <div class="container__top__search__left">
 
@@ -38,15 +37,14 @@
             </div>
         </div>
         <div class="container__content">
-            <userlike></userlike>
+            <userLike></userLike>
         </div>
     </div>
 </template>
 <script setup>
-import Navigation from '@/components/tabar/navigation.vue'
 import Search from '@/components/input/search.vue'
 import Category from '@/components/select/category.vue'
-import userlike from '@/views/shop/userlike.vue'
+import userLike from '@/views/shop/userlike.vue'
 import { onMounted, reactive, ref, watch } from 'vue'
 const images = [
     "https://gw.alicdn.com/imgextra/i1/O1CN01NJPKCI1oN9KE4ry7R_!!6000000005212-1-tps-2112-800.gif",
@@ -91,7 +89,6 @@ const insetObs = () => {
     white-space: nowrap;
     min-width: 1000px;
     overflow: auto;
-
     &__top {
         flex: 3;
         width: 87%;

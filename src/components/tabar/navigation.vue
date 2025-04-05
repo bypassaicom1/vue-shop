@@ -17,14 +17,13 @@
             <span class="navigation-container__right__text">卖家中心</span>
             <span class="navigation-container__right__text">帮助中心</span>
         </div>
-
     </div>
 </template>
 <script setup>
 import { useRouter } from 'vue-router';
 const router = useRouter()
 
-</script>
+</script>z
 <style scoped lang="scss">
 .navigation-container {
     width: 100%;
