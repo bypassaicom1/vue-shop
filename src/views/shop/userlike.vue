@@ -1,6 +1,6 @@
 <template>
     <div class="shops-container">
-        <div v-for="item in datas" :key="item.id" class="shops-container__item">
+        <div @click="toProductDetails(item.id)" v-for="item in datas" :key="item.id" class="shops-container__item">
             <img class="shops-container__item__img" :src="item.img" alt="">
             <span class="shops-container__item__title">{{ item.title }}</span>
             <div class="shops-container__item__pri">
@@ -12,6 +12,8 @@
     </div>
 </template>
 <script setup>
+import { useRouter } from 'vue-router';
+
 const datas = [
     {
         id: 1,
@@ -110,6 +112,10 @@ const datas = [
         price: 107
     },
 ]
+const router=useRouter()
+const toProductDetails = (productId)=>{
+    router.push(`/home/detail?productId=${productId}`)
+}
 </script>
 <style scoped lang="scss">
 .shops-container {

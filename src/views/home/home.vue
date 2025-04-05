@@ -12,10 +12,10 @@ import Navigation from '@/components/tabar/navigation.vue'
     height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
     &__navigation{
         width: 87%;
+        white-space: nowrap;
     }
 }
 </style>

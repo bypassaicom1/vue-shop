@@ -89,6 +89,7 @@ const insetObs = () => {
     white-space: nowrap;
     min-width: 1000px;
     overflow: auto;
+
     &__top {
         flex: 3;
         width: 87%;
