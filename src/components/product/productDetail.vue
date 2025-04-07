@@ -15,7 +15,10 @@
             </div>
         </div>
         <div class="product-detail__container__detail">
-            <div>
+            <div class="product-detail__container__detail__left">
+                <VerticalCarousel></VerticalCarousel>
+            </div>
+            <div class="product-detail__container__detail__right">
                 
             </div>
         </div>
@@ -24,6 +27,7 @@
 <script setup>
 import { ref } from 'vue'
 import { ChatLineRound,Shop } from '@element-plus/icons-vue'
+import VerticalCarousel from '@/components/carousel/verticalCarousel.vue'
 const dp = {
     img: "https://img.alicdn.com/imgextra/i1/O1CN01pz5irY1bhDKceJor2_!!6000000003496-2-tps-144-144.png_110x110q30.jpg_.webp",
     name: '春秋大地中叶',
@@ -33,8 +37,10 @@ const ratePoint = ref(3.7)
 </script>
 <style lang="scss">
 .product-detail__container {
+    height: 100%;
     display: flex;
     flex-direction: column;
+    gap: 10px;
     &__front {
         display: flex;
         align-items: center;
@@ -76,8 +82,20 @@ const ratePoint = ref(3.7)
         }
     }
     &__detail{
+        height: 100%;
+        flex: 1;
         display: flex;
         gap: 20px;
+        margin-top: 15px;
+        overflow: auto;
+        &__left{
+            flex: 1;
+        }
+        &__right{
+            flex: 1;
+            background-color: blue;
+        }
+
     }
 }
 </style>
