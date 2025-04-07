@@ -22,7 +22,6 @@ const logoImg = "https://gw.alicdn.com/imgextra/i1/O1CN01z163bz1lHF5yQ50CC_!!600
     flex-direction: column;
     margin-top: 10px;
     height: 100%;
-    overflow: auto;
     &__search {
         display: flex;
         align-items: center;
