@@ -117,9 +117,9 @@ function intoPic(imgPath, dom) {
 
     &__bottom {
         background-color: #F5F5F5;
-        height: 8%;
-        width: 40%;
-        margin-left: 30%;
+        height: 7%;
+        width: 30%;
+        margin-left: 40%;
         display: flex;
         justify-content: space-around;
         align-items: center;
@@ -133,7 +133,6 @@ function intoPic(imgPath, dom) {
             width: 80%;
             border-radius: 10px;
             &:hover {
-
                 background-color: #FFFFFF;
             }
         }
